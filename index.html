@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smoky Sequential Effect</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #1a1a1a; /* Cinza escuro */
+            font-family: 'Arial Black', sans-serif;
+            overflow: hidden;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        h1 span {
+            color: #fff;
+            font-size: 8rem;
+            display: inline-block;
+            transition: all 1s ease-in-out;
+            cursor: default;
+        }
+
+        /* Efeito de fumaça quando o mouse passa */
+        h1:hover span {
+            filter: blur(40px);
+            opacity: 0;
+            transform: translateY(-80px) scale(1.5);
+        }
+
+        /* Delays fixos: valem tanto para a IDA quanto para a VOLTA */
+        /* Isso garante que o S sempre comece primeiro */
+        h1 span:nth-child(1) { transition-delay: 0.0s; }
+        h1 span:nth-child(2) { transition-delay: 0.2s; }
+        h1 span:nth-child(3) { transition-delay: 0.4s; }
+        h1 span:nth-child(4) { transition-delay: 0.6s; }
+        h1 span:nth-child(5) { transition-delay: 0.8s; }
+
+    </style>
+</head>
+<body>
+
+    <h1>
+        <span>S</span>
+        <span>M</span>
+        <span>O</span>
+        <span>K</span>
+        <span>Y</span>
+    </h1>
+
+</body>
+</html>
